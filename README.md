@@ -9,7 +9,7 @@ A opinionated tweaked [ublue](https://universal-blue.org/) image of silverblue-m
 - NeoVim pre-installed
 - v4l2loopback kernel module for obs virtual webcam
 - Firefox replaced with LibreWolf flatpak
-- A few pre-installed flatpaks (you can see in `onfig/recipe.yml`)
+- A few pre-installed flatpaks (you can see in `config/recipe.yml`)
 
 ## Installation
 
