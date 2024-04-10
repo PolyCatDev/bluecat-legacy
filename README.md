@@ -1,6 +1,15 @@
 # BlueCat &nbsp; [![build-ublue](https://github.com/blue-build/template/actions/workflows/build.yml/badge.svg)](https://github.com/blue-build/template/actions/workflows/build.yml)
 
-A tweaked [ublue](https://universal-blue.org/) image of silverblue-main.
+A opinionated tweaked [ublue](https://universal-blue.org/) image of silverblue-main.
+
+## Changes and Features
+- All the uBlue backend goodies
+- Gnome Console insetad of Gnome Terminal
+- Steam pre-installed
+- NeoVim pre-installed
+- v4l2loopback kernel module for obs virtual webcam
+- Firefox replaced with LibreWolf flatpak
+- A few pre-installed flatpaks (you can see in `onfig/recipe.yml`)
 
 ## Installation
 
