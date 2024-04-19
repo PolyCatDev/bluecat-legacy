@@ -1,6 +1,6 @@
 # BlueCat &nbsp; [![build-ublue](https://github.com/blue-build/template/actions/workflows/build.yml/badge.svg)](https://github.com/blue-build/template/actions/workflows/build.yml)
 
-An opinionated tweaked [ublue](https://universal-blue.org/) image of silverblue-main.
+An opinionated tweaked [ublue](https://universal-blue.org/) image based on silverblue-main.
 
 ## Changes and Features
 - All the uBlue backend goodies
