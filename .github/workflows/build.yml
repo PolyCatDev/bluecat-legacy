@@ -11,7 +11,6 @@ on:
   workflow_dispatch: # allow manually triggering builds
 jobs:
   bluebuild:
-    if: github.ref == 'refs/heads/live'
     name: Build Custom Image
     runs-on: ubuntu-latest
     permissions:
