@@ -5,9 +5,9 @@ An opinionated tweaked [ublue](https://universal-blue.org/) image of silverblue-
 ## Changes and Features
 - All the uBlue backend goodies
 - Gnome Console insetad of Gnome Terminal
-- Steam pre-installed
+- Steam pre-installed (only for AMD/Intel)
 - NeoVim pre-installed
-- v4l2loopback kernel module for obs virtual webcam
+- v4l2loopback kernel module for obs virtual webcam (currently not enabled)
 - Firefox replaced with LibreWolf flatpak
 - A few pre-installed flatpaks (you can see in `config/recipe.yml`)
 
