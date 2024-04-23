@@ -7,7 +7,7 @@ An opinionated tweaked [ublue](https://universal-blue.org/) image based on silve
 - Gnome Console insetad of Gnome Terminal
 - Steam pre-installed (only for AMD/Intel)
 - NeoVim pre-installed
-- v4l2loopback kernel module for obs virtual webcam (currently not enabled)
+- v4l2loopback kernel module for obs virtual webcam
 - Firefox replaced with LibreWolf flatpak
 - A few pre-installed flatpaks (you can see in `config/recipe.yml`)
 
