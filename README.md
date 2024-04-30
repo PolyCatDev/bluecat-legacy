@@ -10,6 +10,7 @@ An opinionated tweaked [ublue](https://universal-blue.org/) image based on silve
 - v4l2loopback kernel module for obs virtual webcam
 - Firefox replaced with LibreWolf flatpak
 - A few pre-installed flatpaks (you can see in `config/recipe.yml`)
+- python3-tkinter installed just in case
 
 ## Installation
 To rebase an existing atomic Fedora installation to the latest build:
