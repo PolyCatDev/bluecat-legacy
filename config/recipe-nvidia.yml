@@ -28,7 +28,7 @@ modules:
       # - steam
       - gnome-console
       - neovim
-      # - v4l2loopback
+      - python3-tkinter
     remove:
       # example: removing firefox (in favor of the flatpak)
       # "firefox" is the main package, "firefox-langpacks" is a dependency
