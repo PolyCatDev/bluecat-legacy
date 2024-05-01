@@ -3,6 +3,7 @@
 An opinionated tweaked [ublue](https://universal-blue.org/) image based on silverblue-main.
 
 ## Changes and Features
+
 - All the uBlue backend goodies
 - Gnome Console insetad of Gnome Terminal
 - Steam pre-installed (only for AMD/Intel)
@@ -13,6 +14,7 @@ An opinionated tweaked [ublue](https://universal-blue.org/) image based on silve
 - python3-tkinter installed just in case
 
 ## Installation
+
 To rebase an existing atomic Fedora installation to the latest build:
 
 ### AMD/Intel
@@ -34,7 +36,30 @@ To rebase an existing atomic Fedora installation to the latest build:
   systemctl reboot
   ```
 
+### AMD/Intel - Laptop
+
+**ATTENTION:** Currently nonexistent. Request it thru a bug report and I'll create it for you.
+
+- First rebase to the unsigned image, to get the proper signing keys and policies installed:
+  ```
+  rpm-ostree rebase ostree-unverified-registry:ghcr.io/polycatdev/bluecat-laptop:latest
+  ```
+- Reboot to complete the rebase:
+  ```
+  systemctl reboot
+  ```
+- Then rebase to the signed image, like so:
+  ```
+  rpm-ostree rebase ostree-image-signed:docker://ghcr.io/polycatdev/bluecat-laptop:latest
+  ```
+- Reboot again to complete the installation
+  ```
+  systemctl reboot
+  ```
+
 ### Nvidia
+
+**ATTENTION:** Currently offline. Request it thru a bug report and I'll enable the build for you.
 
 - First rebase to the unsigned image, to get the proper signing keys and policies installed:
   ```
@@ -53,7 +78,24 @@ To rebase an existing atomic Fedora installation to the latest build:
   systemctl reboot
   ```
 
-The `latest` tag will automatically point to the latest build. That build will still always use the Fedora version specified in `recipe.yml`, so you won't get accidentally updated to the next major version.
+### Nvidia - Laptop
+
+- First rebase to the unsigned image, to get the proper signing keys and policies installed:
+  ```
+  rpm-ostree rebase ostree-unverified-registry:ghcr.io/polycatdev/bluecat-nvidia-laptop:latest
+  ```
+- Reboot to complete the rebase:
+  ```
+  systemctl reboot
+  ```
+- Then rebase to the signed image, like so:
+  ```
+  rpm-ostree rebase ostree-image-signed:docker://ghcr.io/polycatdev/bluecat-nvidia-laptop:latest
+  ```
+- Reboot again to complete the installation
+  ```
+  systemctl reboot
+  ```
 
 ## ISO
 
