@@ -12,6 +12,7 @@ If anyone is using these images please reach out with a bug report so that I don
 
 - All the uBlue backend goodies
 - Gnome Console insetad of Gnome Terminal
+- VSCodium preinstalled on system level thanks to [qoijjj](https://copr.fedorainfracloud.org/coprs/qoijjj/vscodium/).
 - Steam pre-installed (only for AMD/Intel)
 - NeoVim pre-installed
 - v4l2loopback kernel module for obs virtual webcam
