@@ -23,8 +23,8 @@ jobs:
       matrix:
         recipe:
           # !! Add your recipes here
-          - recipe-amd-intel.yml
-          - recipe-nvidia-laptop.yml
+          - amd-intel.yml
+          - nvidia-laptop.yml
     steps:
       # the build is fully handled by the reusable github action
       - name: Build Custom Image
