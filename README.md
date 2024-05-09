@@ -13,11 +13,11 @@ If anyone is using these images please reach out with a bug report so that I don
 - All the uBlue backend goodies
 - Gnome Console insetad of Gnome Terminal
 - VSCodium preinstalled on system level thanks to [qoijjj](https://copr.fedorainfracloud.org/coprs/qoijjj/vscodium/).
-- Steam pre-installed on system level
+- Steam flatpak pre-installed
 - NeoVim pre-installed
 - v4l2loopback kernel module for obs virtual webcam
 - Firefox replaced with LibreWolf flatpak
-- A few pre-installed flatpaks (you can see in `config/recipe.yml`)
+- A few pre-installed core gnome flatpak apps (can be easily removed)
 - python3-tkinter installed just in case
 
 ## Installation
