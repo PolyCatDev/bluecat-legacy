@@ -14,6 +14,7 @@ If anyone is using these images please reach out with a bug report so that I don
 - Gnome Console insetad of Gnome Terminal
 - VSCodium preinstalled on system level thanks to [qoijjj](https://copr.fedorainfracloud.org/coprs/qoijjj/vscodium/).
 - Steam flatpak pre-installed
+- steam-devices package installed (for even better controller support)
 - NeoVim pre-installed
 - v4l2loopback kernel module for obs virtual webcam
 - Firefox replaced with LibreWolf flatpak
