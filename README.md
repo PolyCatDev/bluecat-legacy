@@ -23,7 +23,7 @@ If anyone is using these images please reach out with a bug report so that I don
 
 ## Installation
 
-Instructions can be found in the [wiki](https://github.com/PolyCatDev/bluecat/wiki/Installation-instructions).
+Instructions can be found in the [wiki](https://github.com/PolyCatDev/bluecat/wiki/BlueCat-Installation-Instructions).
 
 ## ISO
 
