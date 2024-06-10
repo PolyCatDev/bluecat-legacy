@@ -1,4 +1,4 @@
-# BlueCat &nbsp; [![build-ublue](https://github.com/blue-build/template/actions/workflows/build.yml/badge.svg)](https://github.com/PolyCatDev/bluecat/actions)
+# BlueCat &nbsp; [![build-ublue](https://github.com/PolyCatDev/bluecat/actions/workflows/build.yml/badge.svg)](https://github.com/PolyCatDev/bluecat/actions)
 
 An opinionated tweaked [ublue](https://universal-blue.org/) image based on silverblue-main.
 
