@@ -1,7 +1,7 @@
 # image will be published to ghcr.io/<user>/<name>
 name: bluecat
 # description will be included in the image's metadata
-description: uBlue imaged tweaked by PolyCat
+description: uBlue imaged tweaked by PolyCat for AMD/Intel GPUs
 
 # the base image to build on top of (FROM) and the version tag to use
 base-image: ghcr.io/ublue-os/silverblue-main
@@ -29,7 +29,6 @@ modules:
     install:
       - steam-devices
       - gnome-console
-      - neovim
       - python3-tkinter
       - codium
     remove:

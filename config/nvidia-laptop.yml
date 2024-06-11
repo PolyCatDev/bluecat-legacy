@@ -1,7 +1,7 @@
 # image will be published to ghcr.io/<user>/<name>
 name: bluecat-nvidia-laptop
 # description will be included in the image's metadata
-description: uBlue imaged tweaked by PolyCat with nvidia drivers
+description: uBlue imaged tweaked by PolyCat for nvidia laptops
 
 # the base image to build on top of (FROM) and the version tag to use
 base-image: ghcr.io/ublue-os/silverblue-nvidia
