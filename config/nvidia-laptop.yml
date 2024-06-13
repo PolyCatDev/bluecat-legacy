@@ -31,7 +31,7 @@ modules:
       # - https://copr.fedorainfracloud.org/coprs/atim/starship/repo/fedora-%OS_VERSION%/atim-starship-fedora-%OS_VERSION%.repo
       - https://copr.fedorainfracloud.org/coprs/qoijjj/vscodium/repo/fedora-%OS_VERSION%/qoijjj-vscodium-fedora-%OS_VERSION%.repo
     install:
-      - steam-devices
+      #- steam-devices
       - gnome-console
       - neovim
       - python3-tkinter
