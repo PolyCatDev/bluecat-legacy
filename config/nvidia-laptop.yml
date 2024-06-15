@@ -10,10 +10,10 @@ image-version: latest # latest is also supported if you want new updates ASAP
 # module configuration, executed in order
 # you can include multiple instances of the same module
 modules:
-  #- type: akmods
-  #  base: main # if not specified, classic "main" base is used by default
-  #  install:
-  #    - v4l2loopback
+  - type: akmods
+    base: main # if not specified, classic "main" base is used by default
+    install:
+      - v4l2loopback
 
   - type: bling
     install:
@@ -32,7 +32,7 @@ modules:
       - https://copr.fedorainfracloud.org/coprs/qoijjj/vscodium/repo/fedora-%OS_VERSION%/qoijjj-vscodium-fedora-%OS_VERSION%.repo
     install:
       #- steam-devices
-      - gnome-console
+      #- gnome-console
       - neovim
       - python3-tkinter
       - codium
@@ -41,8 +41,8 @@ modules:
       # "firefox" is the main package, "firefox-langpacks" is a dependency
       - firefox
       - firefox-langpacks # also remove firefox dependency (not required for all packages, this is a special case)
-      - gnome-terminal
-      - gnome-terminal-nautilus
+      #- gnome-terminal
+      #- gnome-terminal-nautilus
       - nvtop
 
   - type: default-flatpaks
