@@ -29,6 +29,7 @@ modules:
     install:
       #- steam-devices
       #- gnome-console
+      - WoeUSB
       - python3-tkinter
       - codium
     remove:

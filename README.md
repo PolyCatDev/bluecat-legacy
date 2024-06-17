@@ -17,6 +17,7 @@ If anyone is using these images please reach out with a bug report so that I don
 - v4l2loopback kernel module for obs virtual webcam
 - Firefox replaced with LibreWolf flatpak
 - A few pre-installed core gnome flatpak apps (can be easily removed)
+- WoeUSB installed for creating Windows install drives
 - python3-tkinter installed just in case
 
 ## Installation

@@ -33,7 +33,7 @@ modules:
     install:
       #- steam-devices
       #- gnome-console
-      - neovim
+      - WoeUSB
       - python3-tkinter
       - codium
     remove:
