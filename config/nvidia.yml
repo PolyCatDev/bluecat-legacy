@@ -12,6 +12,13 @@ image-version: latest # latest is also supported if you want new updates ASAP
 
 modules:
 
+  - type: gnome-extensions
+    install:
+      - Caffeine
+      - Tiling Assistant
+      - Blur my Shell 
+      - AppIndicator and KStatusNotifierItem Support
+
   - type: fonts
     fonts:
     nerd-fonts:
@@ -28,6 +35,10 @@ modules:
           /usr # copies config/files/usr into your image's /usr.
           # put configuration files you want in /etc/ on a booted system
           # in /usr/etc/ in the image. read more in files module reference.
+
+  - type: bling
+    install:
+      - ublue-update # https://github.com/ublue-os/ublue-update
 
   - type: rpm-ostree
     repos:
