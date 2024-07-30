@@ -68,6 +68,7 @@ modules:
         - io.github.celluloid_player.Celluloid
         - com.mattjakeman.ExtensionManager
         - org.gnome.Calendar
+        - com.github.tchx84.Flatseal
         - it.mijorus.gearlever
         # - one.ablaze.floorp//lightning # This is an example of flatpak which has multiple branches in selection (flatpak//branch).
       # Flatpak runtimes are not supported (like org.winehq.Wine//stable-23.08),
