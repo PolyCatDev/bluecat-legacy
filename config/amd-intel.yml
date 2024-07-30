@@ -14,8 +14,9 @@ modules:
 
   - type: fonts
     fonts:
-    nerd-fonts:
-      - Hack
+      nerd-fonts:
+        - FiraCode
+        - Hack
 
   - type: akmods
     base: main # if not specified, classic "main" base is used by default
