@@ -11,11 +11,10 @@ If anyone is using these images please reach out with a bug report so that I don
 ## Changes and Features
 
 - All the uBlue backend goodies
-- ~~Gnome Console insetad of Gnome Terminal~~
+- Firefox removed (install web browser from software centre or cmd)
 - VSCodium preinstalled on system level thanks to [qoijjj](https://copr.fedorainfracloud.org/coprs/qoijjj/vscodium/)
 - Steam flatpak pre-installed
 - v4l2loopback kernel module for obs virtual webcam
-- Firefox removed (install browser from software centre or cmd)
 - A few pre-installed core gnome flatpak apps
 - WoeUSB installed for creating Windows install drives
 - python3-tkinter and gcc preinstalled just in case
