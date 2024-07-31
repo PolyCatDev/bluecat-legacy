@@ -17,6 +17,7 @@ modules:
       - Caffeine
       - Tiling Assistant
       - AppIndicator and KStatusNotifierItem Support
+      - Clipboard Indicator
 
   - type: fonts
     fonts:
