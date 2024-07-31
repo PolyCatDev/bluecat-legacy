@@ -15,8 +15,8 @@ If anyone is using these images please reach out with a bug report so that I don
 - VSCodium preinstalled on system level thanks to [qoijjj](https://copr.fedorainfracloud.org/coprs/qoijjj/vscodium/)
 - Steam flatpak pre-installed
 - v4l2loopback kernel module for obs virtual webcam
-- Firefox replaced with LibreWolf flatpak
-- A few pre-installed core gnome flatpak apps (can be easily removed)
+- Firefox removed (install browser from software centre or cmd)
+- A few pre-installed core gnome flatpak apps
 - WoeUSB installed for creating Windows install drives
 - python3-tkinter and gcc preinstalled just in case
 
