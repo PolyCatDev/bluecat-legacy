@@ -12,6 +12,13 @@ image-version: latest # latest is also supported if you want new updates ASAP
 
 modules:
 
+  - type: gnome-extensions
+    install:
+      - Caffeine
+      - Tiling Assistant
+      - Blur my Shell 
+      - AppIndicator and KStatusNotifierItem Support
+
   - type: fonts
     fonts:
       nerd-fonts:
