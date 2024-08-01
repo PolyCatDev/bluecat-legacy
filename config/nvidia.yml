@@ -48,7 +48,6 @@ modules:
       #- steam-devices
       #- gnome-console
       - WoeUSB
-      - gcc
       - python3-tkinter
       - codium
     remove:
