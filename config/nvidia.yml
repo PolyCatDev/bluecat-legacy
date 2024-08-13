@@ -52,7 +52,7 @@ modules:
       - python3-tkinter
       - python3-wxpython4
       - gcc
-      - gcc-++
+      - gcc-c++
 
     remove:
       - firefox
