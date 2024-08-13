@@ -20,7 +20,7 @@ If anyone is using these images please reach out with a bug report so that I don
 - v4l2loopback kernel module for obs virtual webcam
 - A few pre-installed core gnome flatpak apps
 - WoeUSB installed for creating Windows install drives
-- python3-tkinter pre-installed just in case
+- python3-tkinter and gcc pre-installed just in case
 
 ## Installation
 
