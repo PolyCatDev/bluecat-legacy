@@ -51,6 +51,8 @@ modules:
       - codium
       - python3-tkinter
       - python3-wxpython4
+      - gcc
+      - gcc-++
 
     remove:
       - firefox
