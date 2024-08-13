@@ -50,7 +50,7 @@ modules:
       - WoeUSB
       - codium
       - python3-tkinter
-
+      - python3-wxpython4
 
     remove:
       - firefox
