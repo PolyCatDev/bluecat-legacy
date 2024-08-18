@@ -1,0 +1,126 @@
+# This stage is responsible for holding onto
+# your config without copying it directly into
+# the final image
+FROM scratch AS stage-config
+COPY ./config /config
+
+# Copy modules
+# The default modules are inside blue-build/modules
+# Custom modules overwrite defaults
+FROM scratch AS stage-modules
+COPY --from=ghcr.io/blue-build/modules:latest /modules /modules
+COPY ./modules /modules
+
+# Bins to install
+# These are basic tools that are added to all images.
+# Generally used for the build process. We use a multi
+# stage process so that adding the bins into the image
+# can be added to the ostree commits.
+FROM scratch AS stage-bins
+COPY --from=gcr.io/projectsigstore/cosign /ko-app/cosign /bins/cosign
+COPY --from=docker.io/mikefarah/yq /usr/bin/yq /bins/yq
+COPY --from=ghcr.io/blue-build/cli:latest-installer /out/bluebuild /bins/bluebuild
+
+# Keys for pre-verified images
+# Used to copy the keys into the final image
+# and perform an ostree commit.
+#
+# Currently only holds the current image's
+# public key.
+FROM scratch AS stage-keys
+COPY cosign.pub /keys/bluecat.pub
+
+# Stage for AKmod main
+FROM scratch as stage-akmods-main
+COPY --from=ghcr.io/ublue-os/akmods:main-40 /rpms /rpms
+COPY --from=ghcr.io/ublue-os/akmods-extra:main-40 /rpms /rpms
+
+# Main image
+FROM ghcr.io/ublue-os/silverblue-main:latest AS bluecat
+ARG RECIPE=config/amd-intel.yml
+ARG IMAGE_REGISTRY=localhost
+ARG CONFIG_DIRECTORY="/tmp/config"
+ARG MODULE_DIRECTORY="/tmp/modules"
+ARG IMAGE_NAME="bluecat"
+ARG BASE_IMAGE="ghcr.io/ublue-os/silverblue-main"
+
+# Key RUN
+RUN --mount=type=bind,from=stage-keys,src=/keys,dst=/tmp/keys \
+  mkdir -p /etc/pki/containers/ \
+  mkdir -p /usr/etc/pki/containers/ \
+  && cp /tmp/keys/* /etc/pki/containers/ \
+  && cp /tmp/keys/* /usr/etc/pki/containers/ \
+  && ostree container commit
+
+# Bin RUN
+RUN --mount=type=bind,from=stage-bins,src=/bins,dst=/tmp/bins \
+  mkdir -p /usr/bin/ \
+  && cp /tmp/bins/* /usr/bin/ \
+  && ostree container commit
+
+# Module RUNs
+RUN \
+--mount=type=bind,from=stage-config,src=/config,dst=/tmp/config,rw \
+--mount=type=bind,from=stage-modules,src=/modules,dst=/tmp/modules,rw \
+--mount=type=bind,from=ghcr.io/blue-build/cli:3ecb0d3d939b127fa47460ea07008bc6621e4fa5-build-scripts,src=/scripts/,dst=/tmp/scripts/ \
+  --mount=type=cache,dst=/var/cache/rpm-ostree,id=rpm-ostree-cache-bluecat-latest,sharing=locked \
+  /tmp/scripts/run_module.sh 'gnome-extensions' '{"type":"gnome-extensions","install":["Caffeine","Tiling Assistant","AppIndicator and KStatusNotifierItem Support"]}' \
+  && ostree container commit
+RUN \
+--mount=type=bind,from=stage-config,src=/config,dst=/tmp/config,rw \
+--mount=type=bind,from=stage-modules,src=/modules,dst=/tmp/modules,rw \
+--mount=type=bind,from=ghcr.io/blue-build/cli:3ecb0d3d939b127fa47460ea07008bc6621e4fa5-build-scripts,src=/scripts/,dst=/tmp/scripts/ \
+  --mount=type=cache,dst=/var/cache/rpm-ostree,id=rpm-ostree-cache-bluecat-latest,sharing=locked \
+  /tmp/scripts/run_module.sh 'fonts' '{"type":"fonts","fonts":{"nerd-fonts":["FiraCode","Hack"]}}' \
+  && ostree container commit
+RUN \
+--mount=type=bind,from=stage-config,src=/config,dst=/tmp/config,rw \
+--mount=type=bind,from=stage-modules,src=/modules,dst=/tmp/modules,rw \
+--mount=type=bind,from=stage-akmods-main,src=/rpms,dst=/tmp/rpms,rw \
+--mount=type=bind,from=ghcr.io/blue-build/cli:3ecb0d3d939b127fa47460ea07008bc6621e4fa5-build-scripts,src=/scripts/,dst=/tmp/scripts/ \
+  --mount=type=cache,dst=/var/cache/rpm-ostree,id=rpm-ostree-cache-bluecat-latest,sharing=locked \
+  /tmp/scripts/run_module.sh 'akmods' '{"type":"akmods","base":"main","install":["v4l2loopback"]}' \
+  && ostree container commit
+RUN \
+--mount=type=bind,from=stage-config,src=/config,dst=/tmp/config,rw \
+--mount=type=bind,from=stage-modules,src=/modules,dst=/tmp/modules,rw \
+--mount=type=bind,from=ghcr.io/blue-build/cli:3ecb0d3d939b127fa47460ea07008bc6621e4fa5-build-scripts,src=/scripts/,dst=/tmp/scripts/ \
+  --mount=type=cache,dst=/var/cache/rpm-ostree,id=rpm-ostree-cache-bluecat-latest,sharing=locked \
+  /tmp/scripts/run_module.sh 'files' '{"type":"files","files":[{"usr":"/usr"}]}' \
+  && ostree container commit
+RUN \
+--mount=type=bind,from=stage-config,src=/config,dst=/tmp/config,rw \
+--mount=type=bind,from=stage-modules,src=/modules,dst=/tmp/modules,rw \
+--mount=type=bind,from=ghcr.io/blue-build/cli:3ecb0d3d939b127fa47460ea07008bc6621e4fa5-build-scripts,src=/scripts/,dst=/tmp/scripts/ \
+  --mount=type=cache,dst=/var/cache/rpm-ostree,id=rpm-ostree-cache-bluecat-latest,sharing=locked \
+  /tmp/scripts/run_module.sh 'bling' '{"type":"bling","install":["ublue-update"]}' \
+  && ostree container commit
+RUN \
+--mount=type=bind,from=stage-config,src=/config,dst=/tmp/config,rw \
+--mount=type=bind,from=stage-modules,src=/modules,dst=/tmp/modules,rw \
+--mount=type=bind,from=ghcr.io/blue-build/cli:3ecb0d3d939b127fa47460ea07008bc6621e4fa5-build-scripts,src=/scripts/,dst=/tmp/scripts/ \
+  --mount=type=cache,dst=/var/cache/rpm-ostree,id=rpm-ostree-cache-bluecat-latest,sharing=locked \
+  /tmp/scripts/run_module.sh 'rpm-ostree' '{"type":"rpm-ostree","repos":["https://download.docker.com/linux/fedora/docker-ce.repo","https://copr.fedorainfracloud.org/coprs/qoijjj/vscodium/repo/fedora-%OS_VERSION%/qoijjj-vscodium-fedora-%OS_VERSION%.repo"],"install":["WoeUSB","codium","python3-tkinter","python3-wxpython4","docker-ce","docker-ce-cli","containerd.io","docker-compose"],"remove":["firefox","firefox-langpacks","gnome-shell-extension-background-logo","nvtop"]}' \
+  && ostree container commit
+RUN \
+--mount=type=bind,from=stage-config,src=/config,dst=/tmp/config,rw \
+--mount=type=bind,from=stage-modules,src=/modules,dst=/tmp/modules,rw \
+--mount=type=bind,from=ghcr.io/blue-build/cli:3ecb0d3d939b127fa47460ea07008bc6621e4fa5-build-scripts,src=/scripts/,dst=/tmp/scripts/ \
+  --mount=type=cache,dst=/var/cache/rpm-ostree,id=rpm-ostree-cache-bluecat-latest,sharing=locked \
+  /tmp/scripts/run_module.sh 'default-flatpaks' '{"type":"default-flatpaks","notify":true,"system":{"repo-url":"https://dl.flathub.org/repo/flathub.flatpakrepo","repo-name":"flathub","repo-title":"Flathub (system-wide)","install":["com.valvesoftware.Steam","org.gnome.Loupe","io.github.celluloid_player.Celluloid","com.mattjakeman.ExtensionManager","org.gnome.Calendar","com.github.tchx84.Flatseal","it.mijorus.gearlever"],"remove":null}}' \
+  && ostree container commit
+RUN \
+--mount=type=bind,from=stage-config,src=/config,dst=/tmp/config,rw \
+--mount=type=bind,from=stage-modules,src=/modules,dst=/tmp/modules,rw \
+--mount=type=bind,from=ghcr.io/blue-build/cli:3ecb0d3d939b127fa47460ea07008bc6621e4fa5-build-scripts,src=/scripts/,dst=/tmp/scripts/ \
+  --mount=type=cache,dst=/var/cache/rpm-ostree,id=rpm-ostree-cache-bluecat-latest,sharing=locked \
+  /tmp/scripts/run_module.sh 'signing' '{"type":"signing"}' \
+  && ostree container commit
+
+RUN rm -fr /tmp/* /var/* && ostree container commit
+
+# Labels are added last since they cause cache misses with buildah
+LABEL org.blue-build.build-id="d5726772-d020-43c2-aac5-8d61373c7b59"
+LABEL org.opencontainers.image.title="bluecat"
+LABEL org.opencontainers.image.description="uBlue imaged tweaked by PolyCat for AMD/Intel GPUs"
+LABEL io.artifacthub.package.readme-url=https://raw.githubusercontent.com/blue-build/cli/main/README.md
