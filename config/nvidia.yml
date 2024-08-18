@@ -52,10 +52,6 @@ modules:
       - codium
       - python3-tkinter
       - python3-wxpython4
-      - docker-ce
-      - docker-ce-cli
-      - containerd.io
-      - docker-compose
 
     remove:
       - firefox
