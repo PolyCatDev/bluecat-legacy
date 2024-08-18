@@ -51,12 +51,12 @@ modules:
       - codium
       - python3-tkinter
       - python3-wxpython4
+      - docker-compose
 
     remove:
       - firefox
       - firefox-langpacks # also remove firefox dependency (not required for all packages, this is a special case)
       - gnome-shell-extension-background-logo
-      - docker-compose
       #- gnome-terminal
       #- gnome-terminal-nautilus
       - nvtop
