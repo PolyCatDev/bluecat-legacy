@@ -1,43 +1,32 @@
-# BlueBuild Template &nbsp; [![bluebuild build badge](https://github.com/blue-build/template/actions/workflows/build.yml/badge.svg)](https://github.com/blue-build/template/actions/workflows/build.yml)
+# BlueCat &nbsp; [![build-ublue](https://github.com/PolyCatDev/bluecat/actions/workflows/build.yml/badge.svg)](https://github.com/PolyCatDev/bluecat/actions)
 
-See the [BlueBuild docs](https://blue-build.org/how-to/setup/) for quick setup instructions for setting up your own repository based on this template.
+An opinionated tweaked [ublue](https://universal-blue.org/) image based on silverblue-main.
 
-After setup, it is recommended you update this README to describe your custom image.
+## What is this?
+
+This is my own tweaked image deployment that I maintain for myself.
+
+If anyone is using these images please reach out with a bug report so that I don't randomly change thing on your computer.
+
+## Changes and Features
+
+- All the uBlue backend goodies
+- Firefox removed (install web browser from software centre or cmd)
+- FiraCode and Hack Nerd fonts included
+- [Caffeine](https://extensions.gnome.org/extension/517/caffeine/), [Tiling Assistant](https://extensions.gnome.org/extension/3733/tiling-assistant/) and [Appindicator Support](https://extensions.gnome.org/extension/615/appindicator-support/) extensions included
+- [Capitaine Cursors](https://www.gnome-look.org/p/1148692) pre-installed (change in Gnome Tweaks app)
+- VSCodium preinstalled on system level thanks to [qoijjj](https://copr.fedorainfracloud.org/coprs/qoijjj/vscodium/)
+- Steam flatpak and Protontricks included
+- Open Tablet Driver included
+- v4l2loopback kernel module for obs virtual webcam
+- A few pre-installed core gnome flatpak apps
+- WoeUSB installed for creating Windows install drives
+- python3-tkinter and python3-wxpython4 pre-installed just in case
 
 ## Installation
 
-> **Warning**  
-> [This is an experimental feature](https://www.fedoraproject.org/wiki/Changes/OstreeNativeContainerStable), try at your own discretion.
-
-To rebase an existing atomic Fedora installation to the latest build:
-
-- First rebase to the unsigned image, to get the proper signing keys and policies installed:
-  ```
-  rpm-ostree rebase ostree-unverified-registry:ghcr.io/blue-build/template:latest
-  ```
-- Reboot to complete the rebase:
-  ```
-  systemctl reboot
-  ```
-- Then rebase to the signed image, like so:
-  ```
-  rpm-ostree rebase ostree-image-signed:docker://ghcr.io/blue-build/template:latest
-  ```
-- Reboot again to complete the installation
-  ```
-  systemctl reboot
-  ```
-
-The `latest` tag will automatically point to the latest build. That build will still always use the Fedora version specified in `recipe.yml`, so you won't get accidentally updated to the next major version.
+Instructions can be found in the [wiki](https://github.com/PolyCatDev/bluecat/wiki/BlueCat-Installation-Instructions).
 
 ## ISO
 
 If build on Fedora Atomic, you can generate an offline ISO with the instructions available [here](https://blue-build.org/learn/universal-blue/#fresh-install-from-an-iso). These ISOs cannot unfortunately be distributed on GitHub for free due to large sizes, so for public projects something else has to be used for hosting.
-
-## Verification
-
-These images are signed with [Sigstore](https://www.sigstore.dev/)'s [cosign](https://github.com/sigstore/cosign). You can verify the signature by downloading the `cosign.pub` file from this repo and running the following command:
-
-```bash
-cosign verify --key cosign.pub ghcr.io/blue-build/template
-```
