@@ -49,6 +49,7 @@ modules:
       #- gnome-console
       - WoeUSB
       - codium
+      - protontricks
       - python3-tkinter
       - python3-wxpython4
 
