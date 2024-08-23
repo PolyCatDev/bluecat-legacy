@@ -16,8 +16,8 @@ If anyone is using these images please reach out with a bug report so that I don
 - [Caffeine](https://extensions.gnome.org/extension/517/caffeine/), [Tiling Assistant](https://extensions.gnome.org/extension/3733/tiling-assistant/) and [Appindicator Support](https://extensions.gnome.org/extension/615/appindicator-support/) extensions included
 - [Capitaine Cursors](https://www.gnome-look.org/p/1148692) pre-installed (change in Gnome Tweaks app)
 - VSCodium preinstalled on system level thanks to [qoijjj](https://copr.fedorainfracloud.org/coprs/qoijjj/vscodium/)
-- Steam flatpak pre-installed
-- Protontricks included
+- Steam flatpak and Protontricks included
+- Open Tablet Driver included
 - v4l2loopback kernel module for obs virtual webcam
 - A few pre-installed core gnome flatpak apps
 - WoeUSB installed for creating Windows install drives
