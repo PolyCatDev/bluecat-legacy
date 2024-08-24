@@ -37,7 +37,6 @@ modules:
       #- gnome-console
       - WoeUSB
       - codium
-      - protontricks
       - https://github.com/OpenTabletDriver/OpenTabletDriver/releases/latest/download/OpenTabletDriver.rpm
       - python3-tkinter
       - python3-wxpython4
