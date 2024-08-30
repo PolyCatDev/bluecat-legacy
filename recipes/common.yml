@@ -38,6 +38,7 @@ modules:
       - WoeUSB
       - codium
       - https://github.com/OpenTabletDriver/OpenTabletDriver/releases/latest/download/OpenTabletDriver.rpm
+      - waydroid
       - python3-tkinter
       - python3-wxpython4
 
