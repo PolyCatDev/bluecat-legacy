@@ -31,7 +31,6 @@ If anyone is using these images please reach out with a bug report so that I don
 - [VSCodium](https://vscodium.com/) thanks to [qoijjj](https://copr.fedorainfracloud.org/coprs/qoijjj/vscodium/)
 - [Podman](https://podman.io/) and [Docker](https://www.docker.com/)
 - [Open Tablet Driver](https://opentabletdriver.net/)
-- [Waydroid](https://waydro.id/) for running android apps
 - [WoeUSB](https://github.com/WoeUSB/WoeUSB) for creating Windows install drives
 - python3-tkinter and python3-wxpython4 pre-installed just in case
 
