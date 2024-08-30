@@ -23,9 +23,13 @@ modules:
     install:
       - v4l2loopback
 
-  #- type: bling
-  #  install:
-  #    - ublue-update # https://github.com/ublue-os/ublue-update
+  - type: systemd
+    system:
+      enabled:
+        - opentabletdriver.service
+        - docker.service
+        - docker.socket
+        
 
   - type: rpm-ostree
     repos:
