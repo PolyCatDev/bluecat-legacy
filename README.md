@@ -18,6 +18,7 @@ If anyone is using these images please reach out with a bug report so that I don
 - [Capitaine Cursors](https://www.gnome-look.org/p/1148692) pre-installed (change in Gnome Tweaks app)
 - VSCodium preinstalled on system level thanks to [qoijjj](https://copr.fedorainfracloud.org/coprs/qoijjj/vscodium/)
 - Steam flatpak included
+- [Waydroid](https://waydro.id/) included
 - Open Tablet Driver included
 - v4l2loopback kernel module for obs virtual webcam
 - A few pre-installed core gnome flatpak apps
