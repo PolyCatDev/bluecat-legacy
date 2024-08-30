@@ -33,20 +33,22 @@ modules:
       - https://download.docker.com/linux/fedora/docker-ce.repo
       - https://copr.fedorainfracloud.org/coprs/qoijjj/vscodium/repo/fedora-%OS_VERSION%/qoijjj-vscodium-fedora-%OS_VERSION%.repo
     install:
-      #- steam-devices
       #- gnome-console
       - WoeUSB
       - codium
       - https://github.com/OpenTabletDriver/OpenTabletDriver/releases/latest/download/OpenTabletDriver.rpm
       - waydroid
-      - python3-tkinter
-      - python3-wxpython4
+      - gcc
 
       # Install Docker
       - docker-ce
       - docker-ce-cli
       - containerd.io
       - docker-compose-plugin
+
+      # Deps
+      - python3-tkinter
+      - python3-wxpython4
 
     remove:
       - firefox
