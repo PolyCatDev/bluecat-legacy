@@ -17,7 +17,6 @@ If anyone is using these images please reach out with a bug report so that I don
 - FiraCode and Hack Nerd fonts included
 - [Caffeine](https://extensions.gnome.org/extension/517/caffeine/), [Tiling Assistant](https://extensions.gnome.org/extension/3733/tiling-assistant/) and [Appindicator Support](https://extensions.gnome.org/extension/615/appindicator-support/) extensions included
 - [Capitaine Cursors](https://www.gnome-look.org/p/1148692) pre-installed (change in Gnome Tweaks app)
-- Using [fsync kernel](https://copr.fedorainfracloud.org/coprs/sentry/kernel-fsync/)
 - v4l2loopback kernel module for obs virtual webcam
 
 
