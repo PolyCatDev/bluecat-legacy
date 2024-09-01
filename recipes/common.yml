@@ -29,7 +29,7 @@ modules:
         - opentabletdriver.service
 
   - type: akmods
-    base: main # if not specified, classic "main" base is used by default
+    base: fsync
     install:
       - v4l2loopback
 
