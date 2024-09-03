@@ -28,6 +28,12 @@ modules:
       enabled:
         - opentabletdriver.service
 
+  - type: brew
+    brew-analytics: false
+    auto-update: true
+    auto-upgrade: true
+    nofile-limits: true
+
   - type: akmods
     base: main
     install:
