@@ -32,6 +32,7 @@ If anyone is using these images please reach out with a bug report so that I don
 - [Podman](https://podman.io/) and [Docker](https://www.docker.com/)
 - [Open Tablet Driver](https://opentabletdriver.net/)
 - [WoeUSB](https://github.com/WoeUSB/WoeUSB) for creating Windows install drives
+- gcc
 - python3-tkinter and python3-wxpython4 just in case
 
 ## How to use
