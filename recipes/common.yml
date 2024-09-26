@@ -44,7 +44,7 @@ modules:
       - https://download.docker.com/linux/fedora/docker-ce.repo
       - https://copr.fedorainfracloud.org/coprs/qoijjj/vscodium/repo/fedora-%OS_VERSION%/qoijjj-vscodium-fedora-%OS_VERSION%.repo
     install:
-      - virt-manager
+      #- gnome-console
       - WoeUSB
       - codium
       - https://github.com/OpenTabletDriver/OpenTabletDriver/releases/latest/download/OpenTabletDriver.rpm
