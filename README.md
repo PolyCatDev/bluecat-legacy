@@ -18,6 +18,7 @@ If anyone is using these images please reach out with a bug report so that I don
 - FiraCode and Hack Nerd fonts included
 - [Caffeine](https://extensions.gnome.org/extension/517/caffeine/) and [Appindicator Support](https://extensions.gnome.org/extension/615/appindicator-support/) extensions included
 - [Capitaine Cursors](https://www.gnome-look.org/p/1148692) pre-installed (change in Gnome Tweaks app)
+- [virt-manager](https://virt-manager.org/) included for maanging VMs
 - v4l2loopback kernel module for obs virtual webcam
 
 ### Included apps
@@ -31,6 +32,7 @@ If anyone is using these images please reach out with a bug report so that I don
 - [VSCodium](https://vscodium.com/) thanks to [qoijjj](https://copr.fedorainfracloud.org/coprs/qoijjj/vscodium/)
 - [Podman](https://podman.io/) and [Docker](https://www.docker.com/)
 - [Open Tablet Driver](https://opentabletdriver.net/)
+- [virt-manager](https://virt-manager.org/)
 - [WoeUSB](https://github.com/WoeUSB/WoeUSB) for creating Windows install drives
 - python3-tkinter and python3-wxpython4 just in case
 
