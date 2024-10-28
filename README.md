@@ -20,7 +20,6 @@ If anyone is using these images please reach out with a bug report so that I don
 - v4l2loopback kernel module for obs virtual webcam
 
 ### Included apps
-- [Chirp](https://chirpmyradio.com/)
 - [Loupe](https://flathub.org/apps/org.gnome.Loupe)
 - [Celluloid](https://flathub.org/apps/io.github.celluloid_player.Celluloid)
 - [Calendar](https://flathub.org/apps/org.gnome.Calendar)
