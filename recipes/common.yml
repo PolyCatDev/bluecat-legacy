@@ -54,8 +54,6 @@ modules:
       - containerd.io
       - docker-compose-plugin
 
-      - chirp
-      
       # Deps
       - python3-tkinter
       - python3-wxpython4
