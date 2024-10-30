@@ -45,6 +45,7 @@ modules:
     install:
       - WoeUSB
       #- codium
+      - gnome-console
       #- https://github.com/OpenTabletDriver/OpenTabletDriver/releases/latest/download/OpenTabletDriver.rpm
 
       # Install Docker
@@ -61,8 +62,7 @@ modules:
       - firefox
       - firefox-langpacks # also remove firefox dependency (not required for all packages, this is a special case)
       - gnome-shell-extension-background-logo
-      #- gnome-terminal
-      #- gnome-terminal-nautilus
+      - ptyxis
       - nvtop
 
   - type: default-flatpaks
