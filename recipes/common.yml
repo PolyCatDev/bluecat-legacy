@@ -47,6 +47,7 @@ modules:
       #- codium
       #- https://github.com/OpenTabletDriver/OpenTabletDriver/releases/latest/download/OpenTabletDriver.rpm
       - gnome-console
+      - gnome-terminal-nautilus
 
       # Install Docker
       - docker-ce
