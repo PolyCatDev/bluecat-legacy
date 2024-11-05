@@ -46,7 +46,7 @@ modules:
       - WoeUSB
       #- codium
       #- https://github.com/OpenTabletDriver/OpenTabletDriver/releases/latest/download/OpenTabletDriver.rpm
-      - gnome-terminal
+      - gnome-console
 
       # Install Docker
       - docker-ce
