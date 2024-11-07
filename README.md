@@ -27,7 +27,7 @@ If anyone is using these images please reach out with a bug report so that I don
 - [Flatseal](https://flathub.org/apps/com.github.tchx84.Flatseal)
 - [Gearlever](https://flathub.org/apps/it.mijorus.gearlever)
 - [Steam Flatpak](https://flathub.org/apps/com.valvesoftware.Steam)
-- [VSCodium](https://vscodium.com/) thanks to [qoijjj](https://copr.fedorainfracloud.org/coprs/qoijjj/vscodium/) (temporarily disabled)
+- [VSCodium](https://vscodium.com/) thanks to [Pavlo Rudy](https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/)
 - [Podman](https://podman.io/) and [Docker](https://www.docker.com/)
 - [Open Tablet Driver](https://opentabletdriver.net/) (temporarily disabled)
 - [WoeUSB](https://github.com/WoeUSB/WoeUSB) for creating Windows install drives

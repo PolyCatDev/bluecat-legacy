@@ -41,10 +41,11 @@ modules:
   - type: rpm-ostree
     repos:
       # - https://copr.fedorainfracloud.org/coprs/atim/starship/repo/fedora-%OS_VERSION%/atim-starship-fedora-%OS_VERSION%.repo
+      - codium.repo
       - https://download.docker.com/linux/fedora/docker-ce.repo
     install:
       - WoeUSB
-      #- codium
+      - codium
       #- https://github.com/OpenTabletDriver/OpenTabletDriver/releases/latest/download/OpenTabletDriver.rpm
       - gnome-console
       - gnome-terminal-nautilus
