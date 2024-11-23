@@ -44,6 +44,8 @@ modules:
       - codium.repo
       - https://download.docker.com/linux/fedora/docker-ce.repo
     install:
+      - loupe
+      - celluloid
       - WoeUSB
       - codium
       #- https://github.com/OpenTabletDriver/OpenTabletDriver/releases/latest/download/OpenTabletDriver.rpm
