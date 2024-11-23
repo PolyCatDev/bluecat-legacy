@@ -79,8 +79,6 @@ modules:
       repo-title: "Flathub (system-wide)" # Optional; this sets the remote's user-facing name in graphical frontends like GNOME Software
       install:
         - com.valvesoftware.Steam
-        - org.gnome.Loupe
-        - io.github.celluloid_player.Celluloid
         - com.mattjakeman.ExtensionManager
         - org.gnome.Calendar
         - com.github.tchx84.Flatseal
