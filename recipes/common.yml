@@ -49,6 +49,7 @@ modules:
       #- https://github.com/OpenTabletDriver/OpenTabletDriver/releases/latest/download/OpenTabletDriver.rpm
       - gnome-console
       - gnome-terminal-nautilus
+      - steam
 
       # Install Docker
       - docker-ce
