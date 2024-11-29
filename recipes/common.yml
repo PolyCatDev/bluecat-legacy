@@ -48,7 +48,7 @@ modules:
       - celluloid
       - WoeUSB
       - codium
-      - https://github.com/OpenTabletDriver/OpenTabletDriver/releases/latest/download/OpenTabletDriver.rpm
+      #- https://github.com/OpenTabletDriver/OpenTabletDriver/releases/latest/download/OpenTabletDriver.rpm
       - gnome-console
       - gnome-terminal-nautilus
 
