@@ -23,9 +23,11 @@ modules:
         - docker.service
         - docker.socket
         
-    user:
-      enabled:
-        - opentabletdriver.service
+  #   user:
+  #     enabled:
+  #          - opentabletdriver.service
+  #    
+  - type: gschema-overrides
 
   - type: brew
     brew-analytics: false
