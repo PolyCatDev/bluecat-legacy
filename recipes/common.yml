@@ -48,8 +48,8 @@ modules:
       - celluloid
       - WoeUSB
       - codium
-      #- https://github.com/OpenTabletDriver/OpenTabletDriver/releases/latest/download/OpenTabletDriver.rpm
-      - foot
+      - https://github.com/OpenTabletDriver/OpenTabletDriver/releases/latest/download/OpenTabletDriver.rpm
+      - kgx
       - gnome-terminal-nautilus
 
       # Install Docker
