@@ -51,6 +51,7 @@ modules:
       - WoeUSB
       - codium
       #- https://github.com/OpenTabletDriver/OpenTabletDriver/releases/latest/download/OpenTabletDriver.rpm
+      - kitty
       - gnome-terminal
       - gnome-terminal-nautilus
 
