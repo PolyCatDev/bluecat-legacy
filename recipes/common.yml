@@ -55,6 +55,7 @@ modules:
       - gnome-terminal-nautilus
       - steam
       - gamescope
+      - mangohud
 
       # Install Docker
       - docker-ce
