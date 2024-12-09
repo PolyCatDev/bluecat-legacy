@@ -53,6 +53,7 @@ modules:
       #- https://github.com/OpenTabletDriver/OpenTabletDriver/releases/latest/download/OpenTabletDriver.rpm
       - gnome-terminal
       - gnome-terminal-nautilus
+      - gamescope
 
       # Install Docker
       - docker-ce
