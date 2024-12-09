@@ -44,7 +44,7 @@ The intended way to use this image is to use [Flatpak](https://www.flatpak.org/)
 
 ## Installation
 
-Instructions can be found in the [wiki](https://github.com/PolyCatDev/bluecat/wiki/BlueCat-Installation-Instructions).
+Instructions can be found in the [wiki](https://github.com/PolyCatDev/bluecat-legacy/wiki/BlueCat-Installation-Instructions).
 
 ## ISO
 
