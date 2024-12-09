@@ -1,7 +1,7 @@
 # BlueCat &nbsp; [![build-ublue](https://github.com/PolyCatDev/bluecat/actions/workflows/build.yml/badge.svg)](https://github.com/PolyCatDev/bluecat/actions)
 
->[!Warning]
->This image has rebased on [Bazzite](https://bazzite.gg/) and can found [here](https://github.com/PolyCatDev/bluecat).
+>[!Important]
+>This image has changed tooling and can found [here](https://github.com/PolyCatDev/bluecat).
 
 An opinionated tweaked [ublue](https://universal-blue.org/) image based on [silverblue-main](https://github.com/ublue-os/main/pkgs/container/silverblue-main).
 
